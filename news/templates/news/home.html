@@ -20,10 +20,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
 
         <!-- Bootstrap -->
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <!--Bootstrap Carousel-->
-        <link type="text/css" rel="stylesheet" href="{% static 'css/carousel.css' %}" />
-
         <link rel="stylesheet" href="{% static 'css/isotope/style.css' %}">
 
         <!--Main Stylesheet-->
@@ -39,59 +37,49 @@
         <![endif]-->
     </head>
 
-    <body data-spy="scroll" data-target="#header">
+    <body data-spy="scroll" data-target=".header">
         <!--Start Hedaer Section-->
         <section id="header">
-            <div class="header-area">
-                <div class="header_menu text-center" id="nav" data-spy="affix">
-                    <div class="container-fluid">
-                        <nav class="navbar navbar-default">
+            <div class="container">
+                        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
                             <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
                                 <a class="navbar-brand custom_navbar-brand" href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
-                            </div>
                             <!--End of navbar-header-->
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav navbar-right main_menu">
-                                    <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
-                                    <li><a href="#welcome">about</a></li>
-                                    <li><a href="#portfolio">project</a></li>
-                                    <li><a href="#counter">achivment</a></li>
-                                    <li><a href="#event">event</a></li>
-                                    <li><a href="#testimonial">testimonial</a></li>
-                                    <li><a href="#blog">blog</a></li>
-                                    <li><a href="#contact">contact us</a></li>
-                                    <li><a href="http://www.facebook.com/QTRexxarBlades"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://discord.gg/YhREy7b"><i class="fab fa-discord"></i></a></li>
-                                    <li><a href="https://www.twitch.tv/Rexxarblades"><i class="fab fa-twitch"></i></a></li>
-                                    <li><a href="https://www.youtube.com/channel/UC0I5liBuqVgC2E_ECeIDgiw"><i class="fab fa-youtube"></i></a></li>
+                                <ul class="navbar-nav navbar-right">
+                                    <li class="nav-item active"><a class="nav-link" href="#header">Home</a></li>
+                                    <li><a class="nav-link" href="#welcome">about</a></li>
+                                    <li><a class="nav-link" href="#portfolio">project</a></li>
+                                    <li><a class="nav-link" href="#counter">achivment</a></li>
+                                    <li><a class="nav-link" href="#event">event</a></li>
+                                    <li><a class="nav-link" href="#testimonial">testimonial</a></li>
+                                    <li><a class="nav-link" href="#blog">blog</a></li>
+                                    <li><a class="nav-link" href="#contact">contact us</a></li>
+                                    <li><a class="nav-link" href="http://www.facebook.com/QTRexxarBlades"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a class="nav-link" href="https://discord.gg/YhREy7b"><i class="fab fa-discord"></i></a></li>
+                                    <li><a class="nav-link" href="https://www.twitch.tv/Rexxarblades"><i class="fab fa-twitch"></i></a></li>
+                                    <li><a class="nav-link" href="https://www.youtube.com/channel/UC0I5liBuqVgC2E_ECeIDgiw"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
                         </nav>
                         <!--End of nav-->
-                    </div>
-                    <!--End of container-->
                 </div>
-                <!--End of header menu-->
-            </div>
-            <!--end of header area-->
         </section>
         <!--End of Hedaer Section-->
 
 
 
         <!--Start of slider section-->
+        <br />
+        <br />
         <section id="slider">
-            <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -100,10 +88,10 @@
                 </ol>
 
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
                         <div class="slider_overlay">
-                            <img src="{% static 'img/img1.jpg' %}" alt="...">
+                            <img class="d-block w-100" src="{% static 'img/img1.jpg' %}" alt="First slide">
                             <div class="carousel-caption">
                                 <div class="slider_text">
                                     <h3>Protect</h3>
@@ -115,9 +103,9 @@
                         </div>
                     </div>
                     <!--End of item With Active-->
-                    <div class="item">
+                    <div class="carousel-item">
                         <div class="slider_overlay">
-                            <img src="{% static 'img/img2.jpg' %}" alt="...">
+                            <img class="d-block w-100" src="{% static 'img/img2.jpg' %}" alt="Second slide">
                             <div class="carousel-caption">
                                 <div class="slider_text">
                                     <h3>Protect</h3>
@@ -129,9 +117,9 @@
                         </div>
                     </div>
                     <!--End of Item-->
-                    <div class="item">
+                    <div class="carousel-item">
                         <div class="slider_overlay">
-                            <img src="{% static 'img/img3.jpg' %}" alt="...">
+                            <img class="d-block w-100" src="{% static 'img/img3.jpg' %}" alt="Third slide">
                             <div class="carousel-caption">
                                 <div class="slider_text">
                                     <h3>Protect</h3>
@@ -145,6 +133,17 @@
                     <!--End of item-->
                 </div>
                 <!--End of Carousel Inner-->
+
+                <!--Start of slides change-->
+                <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+                <!--End slides changes-->
             </div>
         </section>
         <!--end of slider section-->
@@ -563,7 +562,7 @@
                                         </ol>
                                         <!-- Carousel items -->
                                         <div class="carousel-inner">
-                                            <div class="active item">
+                                            <div class="carousel-item active">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="profile-circle">
@@ -594,7 +593,7 @@
                                                 </div>
                                             </div>
                                             <!--End of item with active-->
-                                            <div class="item">
+                                            <div class="carousel-item">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="profile-circle">
@@ -749,143 +748,6 @@
         </section>
         <!-- end of blog-->
 
-
-
-        <!--Start of Purches-->
-        <section id="purches">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="purches_title">Buy our wordpress theme</h2>
-                    </div>
-                    <div class="col-md-2 col-md-offset-4">
-                        <a href="" class="purches_btn">purches</a>
-                    </div>
-                </div>
-                <!--End of row-->
-            </div>
-            <!--End of container-->
-        </section>
-        <!--End of purches-->
-
-
-
-        <!--Start of Market-->
-        <section id="market">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="market_area text-center">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="market_logo">
-                                        <a href=""><img src="{% static 'img/audiojungle.png' %}" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="market_logo">
-                                        <a href=""><img src="{% static 'img/codecanyon.png' %}" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="market_logo">
-                                        <a href=""><img src="{% static 'img/graphicriver.png' %}" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="market_logo">
-                                        <a href=""><img src="{% static 'img/audiojungle.png' %}" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End of row-->
-                        </div>
-                        <!--End of market Area-->
-                    </div>
-                    <!--End of col-md-12-->
-                </div>
-                <!--End of row-->
-            </div>
-            <!--End of container-->
-        </section>
-        <!--End of market-->
-
-
-
-        <!--Start of contact-->
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="colmd-12">
-                        <div class="contact_area text-center">
-                            <h3>get in touch</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <!--End of row-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="office">
-                            <div class="title">
-                                <h5>our office info</h5>
-                            </div>
-                            <div class="office_location">
-                                <div class="address">
-                                    <i class="fa fa-map-marker"><span>Elephant Road, Dhaka 1205, Bangladesh</span></i>
-                                </div>
-                                <div class="phone">
-                                    <i class="fa fa-phone"><span>+ 8801532-987039</span></i>
-                                </div>
-                                <div class="email">
-                                    <i class="fa fa-envelope"><span>youremail@mail.com</span></i>
-                                </div>
-                                <div id="map"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="msg">
-                            <div class="msg_title">
-                                <h5>Drop A Message</h5>
-                            </div>
-                            <div class="form_area">
-                                <!-- CONTACT FORM -->
-                                <div class="contact-form wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-                                    <div id="message"></div>
-                                    <form action="scripts/contact.php" class="form-horizontal contact-1" role="form" name="contactform" id="contactform">
-                                        <div class="form-group">
-                                            <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="email" id="email" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <input type="subject" class="form-control" id="subject" placeholder="Subject *">
-                                                <div class="text_area">
-                                                    <textarea name="contact-message" id="msg" class="form-control" cols="30" rows="8" placeholder="Message"></textarea>
-                                                </div>
-                                                <button type="submit" class="btn custom-btn" data-loading-text="Loading...">Send</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End of col-md-6-->
-                </div>
-                <!--End of row-->
-            </div>
-            <!--End of container-->
-        </section>
-        <!--End of contact-->
-
-
-
         <!--Start of footer-->
         <section id="footer">
             <div class="container">
@@ -913,70 +775,10 @@
         <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
         <!--End of Scroll to top-->
 
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>-->
-        <script src="{% static 'js/jquery-1.12.3.min.js' %}"></script>
-
-        <!--Counter UP Waypoint-->
-        <script src="{% static 'js/waypoints.min.js' %}"></script>
-        <!--Counter UP-->
-        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
-
-        <script>
-            //for counter up
-            $('.counter').counterUp({
-                delay: 10,
-                time: 1000
-            });
-        </script>
-
-        <!--Gmaps-->
-        <script src="{% static 'js/gmaps.min.js' %}"></script>
-        <script type="text/javascript">
-            var map;
-            $(document).ready(function () {
-                map = new GMaps({
-                    el: '#map',
-                    lat: 23.6911078,
-                    lng: 90.5112799,
-                    zoomControl: true,
-                    zoomControlOpt: {
-                        style: 'SMALL',
-                        position: 'LEFT_BOTTOM'
-                    },
-                    panControl: false,
-                    streetViewControl: false,
-                    mapTypeControl: false,
-                    overviewMapControl: false,
-                    scrollwheel: false,
-                });
-
-
-                map.addMarker({
-                    lat: 23.6911078,
-                    lng: 90.5112799,
-                    title: 'Office',
-                    details: {
-                        database_id: 42,
-                        author: 'Foysal'
-                    },
-                    click: function (e) {
-                        if (console.log)
-                            console.log(e);
-                        alert('You clicked in this marker');
-                    },
-                    mouseover: function (e) {
-                        if (console.log)
-                            console.log(e);
-                    }
-                });
-            });
-        </script>
-        <!--Google Maps API-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjxvF9oTfcziZWw--3phPVx1ztAsyhXL4"></script>
-
-
+        <!--Bootstrap 4 -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <!--Isotope-->
         <script src="{% static 'js/isotope/min/scripts-min.js' %}"></script>
         <script src="{% static 'js/isotope/cells-by-row.js' %}"></script>
@@ -998,9 +800,6 @@
         <script>
             new WOW().init();
         </script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
         <!-- Custom JavaScript-->
         <script src="{% static 'js/main.js' %}"></script>
     </body>
